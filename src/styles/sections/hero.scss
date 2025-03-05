@@ -4,7 +4,8 @@
 @import '../base/base';
 
 .hero {
-    background-image: url(../../../rep-1/dist/public/images/main_bg.png);
+    background-image: url("/rep-1/dist/public/images/main_bg.png");
+
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
