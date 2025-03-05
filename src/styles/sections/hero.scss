@@ -4,26 +4,26 @@
 @import '../base/base';
 
 .hero {
-    position: relative; /* для фону */
+    position: relative; /* Важливо, щоб фонове зображення не перекривало контент */
     color: white;
     border-radius: 0 0 72px 72px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 60px 0;
-    
-    /* фонова частина */
-    &__background {
+
+    /* фонова частина, яка тепер використовує тег <img> */
+    .hero__background {
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        background-image: url("/rep-1/dist/public/images/main_bg.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        z-index: -1; /* поміщаємо фон під контент */
-        opacity: 0.7; /* можна налаштувати прозорість */
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* щоб зображення покривало всю секцію */
+        z-index: -1; /* щоб фон був позаду всього іншого контенту */
+        opacity: 0.7; /* налаштування прозорості */
     }
 
     &__container {
