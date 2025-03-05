@@ -4,16 +4,27 @@
 @import '../base/base';
 
 .hero {
-    background-image: url("/rep-1/dist/public/images/main_bg.png");
-
-    background-repeat: no-repeat;
-    background-size: cover;
+    position: relative; /* для фону */
     color: white;
     border-radius: 0 0 72px 72px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 60px 0;
+    
+    /* фонова частина */
+    &__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("/rep-1/dist/public/images/main_bg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1; /* поміщаємо фон під контент */
+        opacity: 0.7; /* можна налаштувати прозорість */
+    }
 
     &__container {
         display: flex;
@@ -45,7 +56,6 @@
 
     &__title {
         margin-bottom: 1rem;
-
     }
 
     &__subtitle {
